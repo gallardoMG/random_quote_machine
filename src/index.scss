@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$color: #000;
+.wraper {
+  display: grid;
+  font-family: 'Baloo Tammudu 2', sans-serif;
+  line-height: 2.2rem;
+  place-content: center;
+  min-height: 100vh;
+  transition: 1s;
+  user-select: none;
+  #quote-box {
+    display: flex;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    max-width: 35rem;
+    flex-direction: column;
+    background-color: white;
+    #text {
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 2rem;
+    }
+    #author {
+      text-align: end;
+      padding: 0 2.5rem 1rem 0;
+      font-size: 1.1rem;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 8rem;
+      justify-items: center;
+      .button-theme {
+        font-size: 1rem;
+        border: 1px solid transparent;
+        color: white;
+        padding: 0.5rem;
+        margin: 0.3rem;
+        border-radius: 0.2rem;
+        cursor: pointer;
+      }
+      .button-theme:hover {
+        opacity: 75%;
+      }
+      #tumblr-quote,
+      #tweet-quote {
+        width: 2.5rem;
+      }
+    }
+  }
+}
+.footer {
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 0.4rem;
+}
+.quote-text,
+.quote-author {
+  animation-duration: 2s;
+  animation-name: text;
+}
+.transition {
+  animation-duration: 2s;
+  animation-name: text2;
+}
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes text2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
